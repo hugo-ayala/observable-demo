@@ -1,0 +1,10 @@
+<div *ngIf="!factsError">
+  <div *ngFor="let fact of catFacts">
+  <p>Verified: {{fact.status.verified}}</p>
+  <p>Text: {{fact.text}}</p>
+</div>
+</div>
+<div *ngIf="factsError">
+  {{errorMessage}}
+</div>
+<router-outlet></router-outlet>
